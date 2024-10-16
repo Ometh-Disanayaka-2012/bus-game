@@ -1,0 +1,110 @@
+body {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+
+    #container-div {
+        position: relative;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+div {
+    background-color: rgb(255, 0, 111);
+}
+
+#top-div {
+    position: absolute;
+    left: 0;
+    top: -100vh;
+}
+
+#bottom-div {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.background-div {
+
+    height: 100vh;
+    background-image: url("img/bg-3.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+
+    /* img {
+        width: 100%;
+        height: 100%;
+    } */
+
+
+}
+
+#bus {
+    background-image: url("/img/bus-top.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100px;
+    height: 200px;
+}
+
+#game-over-banner{
+    visibility: hidden;
+    position: fixed;
+    
+    top: 50%;
+    left: 37%;
+    background-color: transparent;
+    color: orangered;
+    h1{
+        font-size:75px;
+    }
+}
+
+#score{
+    position: fixed;
+    
+    top: 10%;
+    left: 37%;
+    background-color: transparent;
+    color: orangered;
+  
+        font-size:75px;
+    
+}
+
+#speed0Div{
+    border-radius: 50%;
+    background-image: url("/img/speed 0.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    bottom: 0;
+    left: 10%;
+    width: 200px;
+    height: 200px;
+}
+
+#speed80Div{
+    visibility: hidden;
+    border-radius: 50%;
+    background-image: url("/img/speed 100.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    bottom: 0;
+    left: 10%;
+    width: 200px;
+    height: 200px;
+}
