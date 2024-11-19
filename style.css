@@ -108,3 +108,19 @@ div {
     width: 200px;
     height: 200px;
 }
+#steering-wheel-div{
+    border-radius: 50%;
+    background-image: url("/img/leyland-vehicle-steering-wheel.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color:transparent;
+    position: fixed;
+    bottom: 50px;
+    left: 80%;
+    width: 200px;
+    height: 200px; 
+     
+    transform: rotate(0deg); /* Initial state */
+    transition: transform 0.3s ease; /* Smooth rotation */ 
+}   

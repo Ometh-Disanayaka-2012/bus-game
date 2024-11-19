@@ -6,6 +6,7 @@ const gameOverElm = document.getElementById('game-over-banner');
 const scoreElm = document.getElementById('score');
 const speed0Elm = document.getElementById('speed0Div');
 const speed80Elm = document.getElementById('speed80Div');
+const steeringWheel = document.getElementById('steering-wheel-div');
 
 // const bgDivs = document.getElementsByClassName('background-div');
 let score = 0;
@@ -26,12 +27,17 @@ addEventListener('keydown', (e) => {
         horn();
     }
 });
+let currentAngle = 0;
 
 addEventListener('keyup', (e) => {
 
     if (e.key === "ArrowUp") {
         speed80Elm.style.visibility = 'hidden';
         speed0Elm.style.visibility = 'visible';
+    }
+    if(e.key==="ArrowLeft" || e.key==="ArrowRight"){
+        currentAngle = 0;
+        rotateSteeringWheel(currentAngle);
     }
 });
 
@@ -43,9 +49,15 @@ function moveLeftOrRight(left) {
     if (!gameRunning) return;
     if (left) {
         dx = -10;
+        //rotate
+        currentAngle -= 15; // Turn left
+        rotateSteeringWheel(currentAngle);
 
     } else {
         dx = 10;
+        //rotate
+        currentAngle += 15; // Turn right
+        rotateSteeringWheel(currentAngle);
     }
     busElm.style.left = `${busElm.offsetLeft + dx}px`;
     console.log(busElm.offsetLeft)
@@ -73,4 +85,8 @@ function moveForward() {
         topDiv.style.top = 0;
     }
 
+}
+// Function to rotate the steering wheel
+function rotateSteeringWheel(angle) {
+    steeringWheel.style.transform = `rotate(${angle}deg)`;
 }
